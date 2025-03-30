@@ -1,0 +1,5 @@
+install php latest version set the system env variable as path of php and then install composer from getcomposer.org
+
+
+
+composer global require laravel/installer
