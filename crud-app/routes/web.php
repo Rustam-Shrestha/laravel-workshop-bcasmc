@@ -11,3 +11,5 @@ Route::get('/', function () {
 //function name of the controller
 // with name of the route we specify only name of that route
 Route::get('/product', [ProductController::class, 'index'])->name('products.index');
+Route::get('/product/create', [ProductController::class, 'create'])->name('products.create');
+Route::post('/product', [ProductController::class, 'store'])->name('products.store');
