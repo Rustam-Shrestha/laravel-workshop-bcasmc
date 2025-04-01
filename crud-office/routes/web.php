@@ -19,5 +19,11 @@ Route::post('/product', [ProductController::class, 'store'])->name('products.sto
 
 // routes for updation of the records
 //     UPDATE   
-// Route::get('/product/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
-// Route::post('/product/{id}/update', [ProductController::class, 'update'])->name('product.update');
+Route::get('/product/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
+Route::post('/product/{id}/update', [ProductController::class, 'update'])->name('product.update');
+
+
+
+// deleting a record with user view in this endppoint 
+//  DELETE
+Route::delete('/product/{id}', [ProductController::class, 'destroy'])->name('product.destroy');

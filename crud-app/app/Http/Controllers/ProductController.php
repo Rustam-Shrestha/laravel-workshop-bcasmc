@@ -11,9 +11,11 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     //
-    public function index(){
-        return view('products.index');
+    public function index() {
+        $products = Product::all(); // Fetching all products from the database
+        return view('products.index', compact('products')); // Passing $products to the view
     }
+    
 
     public function create(){
         return view('products.create');
